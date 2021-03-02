@@ -14,15 +14,12 @@
   <script>
   console.log("starting ajax request to the resource.");
   $.ajax
-      ({type: "GET",                     //edit method
+      ({type: "POST",                     //edit method
           contentType: "json",           //edit datatype: json, html, etc.dataType: "json",
-          url: "https://www.google.com", //edit host and port, example: http://198.0.1.20:8443/pat
-        headers: {                       //add any headers here
-          "X-AMEX-API-KEY":"test",
-          "Authorization":"test",},
-          xhrFields: {                   //optional
-                withCredentials: true
-            },
+          url: "https://staging.mzaalo.com/api/v1/influencerDashboard/login", //edit host and port, example: http://198.0.1.20:8443/pat
+        headers: {
+        'Ocp-Apim-Subscription-Key': '1d0caac2702049b89a305929fdf4cbae'                       //add any headers here
+        },
       success: function(data)
       {
         console.log("API is CORS enabled, here's the result");
